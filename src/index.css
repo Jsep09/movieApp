@@ -1,0 +1,4 @@
+/* tailwind must buttom to overide css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
