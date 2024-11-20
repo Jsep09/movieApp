@@ -1,7 +1,6 @@
 import SearchAppBar from "../components/Appbar";
 import PopularCarousel from "../components/Popular-Carousel";
 import Trending from "../components/Trending";
-import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 
 const Home = () => {

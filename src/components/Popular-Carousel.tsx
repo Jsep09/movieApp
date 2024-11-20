@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Carousel from "react-material-ui-carousel";
-import { Paper, Button, Slide } from "@mui/material";
+import { Paper } from "@mui/material";
 import getPopular from "../service/Popularmovie";
-import { PopularMovieResponse, Movie } from "../interface/popularmovie";
+import { Movie } from "../interface/popularmovie";
 
 const PopularCarousel = () => {
   const [movie, setMovies] = useState<Movie[]>([]);
