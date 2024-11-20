@@ -1,5 +1,6 @@
 import SearchAppBar from "../components/Appbar";
-
+import PopularCarousel from "../components/Popular-Carousel";
+import Trending from "../components/Trending";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 
@@ -8,7 +9,8 @@ const Home = () => {
     <div className="bg-slate-950 w-full h-full">
       <SearchAppBar />
       <Container maxWidth="xl">
-        <Box sx={{ bgcolor: "#cfe8fc", height: "100vh" }} />
+        <PopularCarousel />
+        <Trending />
       </Container>
     </div>
   );
