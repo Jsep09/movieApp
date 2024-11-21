@@ -1,24 +1,15 @@
-/* Hide default scrollbar */
-.hide-scroll-bar::-webkit-scrollbar {
-  display: none;
-}
-.hide-scroll-bar {
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-}
-
 /* Custom scrollbar styles */
 .flex::-webkit-scrollbar {
   height: 4px; /* Adjust the height for horizontal scrollbar */
 }
 
 .flex::-webkit-scrollbar-thumb {
-  background-color: #ffffff; /* Scroll bar color */
+  background-color: #7a7878; /* Scroll bar color */
   border-radius: 10px; /* Rounded corners */
 }
 
 .flex::-webkit-scrollbar-track {
-  background-color: #2a2a2a; /* Track background color */
+  background-color: #000b3b; /* Track background color */
   border-radius: 10px;
 }
 
