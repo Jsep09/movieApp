@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import getTrending from "../service/Trendingmovie";
-import { MovieTrending } from "../interface/trendingmovie";
+import { Movie } from "../interface/popularmovie";
 import MovieCard from "./MovieCard";
 const Trending = () => {
-  const [trendingMovie, setTrendingMovie] = useState<MovieTrending[]>([]);
+  const [trendingMovie, setTrendingMovie] = useState<Movie[]>([]);
 
   const getMoviesItem = async () => {
-    const result: MovieTrending[] = await getTrending();
+    const result: Movie[] = await getTrending();
     setTrendingMovie(result);
   };
 
@@ -14,9 +14,9 @@ const Trending = () => {
     getMoviesItem();
   }, []);
 
-  useEffect(() => {
-    console.log(trendingMovie);
-  }, [trendingMovie]);
+  // useEffect(() => {
+  //   console.log(trendingMovie);
+  // }, [trendingMovie]);
 
   return (
     <div className="flex flex-col bg-slate-950 ">

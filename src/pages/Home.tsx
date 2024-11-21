@@ -2,7 +2,7 @@ import SearchAppBar from "../components/Appbar";
 import PopularCarousel from "../components/Popular-Carousel";
 import Trending from "../components/Trending";
 import Container from "@mui/material/Container";
-
+import MovieList from "../components/MovieList";
 const Home = () => {
   return (
     <div className="bg-slate-950 w-full h-full">
@@ -10,6 +10,7 @@ const Home = () => {
       <Container maxWidth="xl">
         <PopularCarousel />
         <Trending />
+        <MovieList />
       </Container>
     </div>
   );

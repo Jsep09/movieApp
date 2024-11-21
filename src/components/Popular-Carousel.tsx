@@ -9,13 +9,13 @@ import Button from "@mui/material/Button";
 const PopularCarousel = () => {
   const [movie, setMovies] = useState<Movie[]>([]);
 
-  const getMoviesItem = async () => {
-    const result: Movie[] = await getPopular();
+  const getMoviesItem = async (page: number) => {
+    const result: Movie[] = await getPopular(page);
     setMovies(result.slice(0, 7));
   };
 
   useEffect(() => {
-    getMoviesItem();
+    getMoviesItem(1);
   }, []);
 
   return (
