@@ -54,7 +54,9 @@ const CarouselItem = ({ item }: CarouselItemProps) => {
       />
 
       <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/100 via-transparent to-transparent p-5 rounded-md w-full ">
-        <h2 className="text-white text-2xl font-bold">{item.title}</h2>
+        <h2 className="text-white text-2xl md:text-6xl lg:text-6xl 2xl:text-7xl font-bold">
+          {item.title}
+        </h2>
         <div className="hidden lg:block">
           <p className="text-white text-sm ">{item.overview}</p>
         </div>
