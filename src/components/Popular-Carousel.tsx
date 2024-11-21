@@ -22,7 +22,7 @@ const PopularCarousel = () => {
     <Carousel
       indicators={false}
       animation={"slide"}
-      duration={2000}
+      duration={900}
       interval={5000}
       stopAutoPlayOnHover={true}
       indicatorIconButtonProps={{
@@ -58,9 +58,9 @@ const CarouselItem = ({ item }: CarouselItemProps) => {
           {item.title}
         </h2>
         <div className="hidden lg:block">
-          <p className="text-white text-sm ">{item.overview}</p>
+          <p className="text-white text-sm mt-3 mb-3">{item.overview}</p>
         </div>
-        <Stack direction="row" className="mt-2">
+        <Stack direction="row" className="mt-3 mb-3">
           <Button variant="outlined">Explore</Button>
         </Stack>
       </div>

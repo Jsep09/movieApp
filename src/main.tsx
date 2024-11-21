@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
 import About from "./pages/About.tsx";
+import Favorite from "./pages/Favorite.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/favorite",
+    element: <Favorite />,
   },
 ]);
 createRoot(document.getElementById("root")!).render(
