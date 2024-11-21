@@ -22,7 +22,7 @@ const PopularCarousel = () => {
     <Carousel
       indicators={false}
       animation={"slide"}
-      duration={3000}
+      duration={2000}
       interval={5000}
       stopAutoPlayOnHover={true}
       indicatorIconButtonProps={{
