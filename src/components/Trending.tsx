@@ -21,7 +21,7 @@ const Trending = () => {
   return (
     <div className="flex flex-col bg-slate-950 ">
       <h1 className="flex py-5  font-bold text-2xl text-white">Trending</h1>
-      <div className="flex overflow-x-scroll pb-5 hide-scroll-bar">
+      <div className="flex overflow-x-scroll pb-5  ">
         <div className="flex flex-nowrap">
           {trendingMovie.map((movie, index) => {
             return <MovieCard key={index} item={movie}></MovieCard>;
