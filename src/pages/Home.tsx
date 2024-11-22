@@ -5,7 +5,7 @@ import Container from "@mui/material/Container";
 import MovieList from "../components/MovieList";
 const Home = () => {
   return (
-    <div className="bg-slate-950 w-full h-full">
+    <div className=" w-full h-full">
       <SearchAppBar />
       <Container maxWidth="xl">
         <PopularCarousel />
