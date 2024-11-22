@@ -9,7 +9,7 @@ interface PaginationProp {
 const PaginationUI: React.FC<PaginationProp> = ({ page, onPageChange }) => {
   return (
     <div>
-      <Stack spacing={2} className="justify-center px-2 sm:px-6 md:px-10 ">
+      <Stack spacing={2} className="justify-center  ">
         <Pagination
           count={100} // จำนวนหน้าคงที่
           page={page}
