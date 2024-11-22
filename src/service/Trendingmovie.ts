@@ -1,8 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import {
-  TrendingmovieResponse,
-  MovieTrending,
-} from "../interface/trendingmovie";
+import { MovieResponse, Movie } from "../interface/popularmovie";
 const options = {
   method: "GET",
   url: "https://api.themoviedb.org/3/trending/movie/day?language=en-US",
@@ -13,11 +10,9 @@ const options = {
   },
 };
 
-async function getTrending(): Promise<MovieTrending[]> {
+async function getTrending(): Promise<Movie[]> {
   try {
-    const response: AxiosResponse<TrendingmovieResponse> = await axios.request(
-      options
-    );
+    const response: AxiosResponse<MovieResponse> = await axios.request(options);
     return response.data.results;
   } catch (error) {
     console.log("getTrending Api error", error);
