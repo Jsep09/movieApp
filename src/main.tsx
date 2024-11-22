@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <Favorite />,
   },
   {
-    path: "/detail",
+    path: "/detail/:id",
     element: <Detail />,
   },
 ]);

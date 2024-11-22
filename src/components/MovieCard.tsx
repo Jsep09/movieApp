@@ -8,7 +8,7 @@ const MovieCard = ({ item }: MovieCardItem) => {
   const navigate = useNavigate();
   const handelClickToDetail = () => {
     // Send item object data to /detail  by state
-    navigate("/detail", { state: item });
+    navigate(`/detail/${item.id}`, { state: item });
   };
   return (
     <div className="inline-block pr-6">

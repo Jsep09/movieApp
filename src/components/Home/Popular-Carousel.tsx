@@ -45,7 +45,7 @@ interface CarouselItemProps {
 const CarouselItem = ({ item }: CarouselItemProps) => {
   const navigate = useNavigate();
   const handelClickToDetail = () => {
-    navigate("/detail", { state: item });
+    navigate(`/detail/${item.id}`, { state: item });
   };
   return (
     <Paper
