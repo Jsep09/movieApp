@@ -1,8 +1,8 @@
 import SearchAppBar from "../components/Appbar";
-import PopularCarousel from "../components/Popular-Carousel";
-import Trending from "../components/Trending";
+import PopularCarousel from "../components/Home/Popular-Carousel";
+import Trending from "../components/Home/Trending";
 import Container from "@mui/material/Container";
-import MovieList from "../components/MovieList";
+import MovieList from "../components/Home/MovieList";
 const Home = () => {
   return (
     <div className=" w-full h-full">

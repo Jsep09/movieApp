@@ -1,8 +1,8 @@
-import getPopular from "../service/Popularmovie";
-import { Movie } from "../interface/popularmovie";
-import MovieCard from "./MovieCard";
+import getPopular from "../../service/Popularmovie";
+import { Movie } from "../../interface/movie";
+import MovieCard from "../MovieCard";
 import { useEffect, useState } from "react";
-import PaginationUI from "./controls/Pagination";
+import PaginationUI from "../controls/Pagination";
 
 const MovieList = () => {
   const [moviesList, setMoviesList] = useState<Movie[]>([]);

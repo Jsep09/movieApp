@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import getTrending from "../service/Trendingmovie";
-import { Movie } from "../interface/popularmovie";
-import MovieCard from "./MovieCard";
+import getTrending from "../../service/Trendingmovie";
+import { Movie } from "../../interface/movie";
+import MovieCard from "../MovieCard";
 const Trending = () => {
   const [trendingMovie, setTrendingMovie] = useState<Movie[]>([]);
 

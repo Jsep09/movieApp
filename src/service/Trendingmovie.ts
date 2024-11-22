@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { MovieResponse, Movie } from "../interface/popularmovie";
+import { MovieResponse, Movie } from "../interface/movie";
 const options = {
   method: "GET",
   url: "https://api.themoviedb.org/3/trending/movie/day?language=en-US",

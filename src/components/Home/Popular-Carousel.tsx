@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper } from "@mui/material";
-import getPopular from "../service/Popularmovie";
-import { Movie } from "../interface/popularmovie";
+import getPopular from "../../service/Popularmovie";
+import { Movie } from "../../interface/movie";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
