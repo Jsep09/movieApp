@@ -49,9 +49,11 @@ const MovieList = () => {
 
       {/* Desktop View */}
       <div className="hidden md:block">
-        <div className="flex flex-row">
-          <h1 className="flex py-6 font-bold text-2xl text-white">All Movie</h1>
-          <div className="flex items-center justify-center my-5">
+        <div className="flex flex-row justify-between">
+          <h1 className="flex py-6 font-bold text-2xl text-white">
+            All movies
+          </h1>
+          <div className="flex items-center justify-center ">
             <PaginationUI page={page} onPageChange={handelPageChange} />
           </div>
         </div>
