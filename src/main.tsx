@@ -6,7 +6,7 @@ import "./index.css";
 import App from "./App.tsx";
 import About from "./pages/About.tsx";
 import Favorite from "./pages/Favorite.tsx";
-
+import Detail from "./pages/Detail.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/favorite",
     element: <Favorite />,
+  },
+  {
+    path: "/detail",
+    element: <Detail />,
   },
 ]);
 createRoot(document.getElementById("root")!).render(
