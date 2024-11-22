@@ -5,7 +5,7 @@ interface MovieCardItem {
 const MovieCard = ({ item }: MovieCardItem) => {
   return (
     <div className="inline-block pr-6">
-      <div className="w-44 h-64 max-w-xs overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
+      <div className="w-44 h-64 max-w-xs overflow-hidden rounded-xl shadow-md hover:scale-105 transition duration-500  ">
         <img
           src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
           alt=""
