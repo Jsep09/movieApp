@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Carousel from "react-material-ui-carousel";
 import { Paper } from "@mui/material";
 import getPopular from "../../service/Popularmovie";
@@ -42,6 +43,10 @@ interface CarouselItemProps {
   item: Movie;
 }
 const CarouselItem = ({ item }: CarouselItemProps) => {
+  const navigate = useNavigate();
+  const handelClickToDetail = () => {
+    navigate("/detail", { state: item });
+  };
   return (
     <Paper
       className="relative  sm:h-16 md:h-2/4 lg:h-110 xl:h-128 2xl:h-128 bg-slate-950 mt-3 "
@@ -61,7 +66,9 @@ const CarouselItem = ({ item }: CarouselItemProps) => {
           <p className="text-white text-sm mt-3 mb-3">{item.overview}</p>
         </div>
         <Stack direction="row" className="mt-3 mb-3">
-          <Button variant="outlined">Explore</Button>
+          <Button variant="outlined" onClick={handelClickToDetail}>
+            Explore
+          </Button>
         </Stack>
       </div>
     </Paper>
