@@ -12,7 +12,9 @@
   background-color: #000b3b; /* Track background color */
   border-radius: 10px;
 }
-
+body {
+  background-color: rgb(2 6 23);
+}
 /* tailwind must buttom to overide css file */
 @tailwind base;
 @tailwind components;
