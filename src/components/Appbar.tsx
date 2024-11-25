@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -14,12 +14,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
 import { useNavigate } from "react-router-dom";
-import ReactDOMServer from "react-dom/server";
 
-const svgString = ReactDOMServer.renderToString(
-  <LocalMoviesIcon style={{ fontSize: 100 }} />
-);
-console.log(svgString);
 const pages = [
   {
     name: "Home",
@@ -39,6 +34,12 @@ function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
+
+  const handleInputText = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // value คือ user input
+    const value: string = e.target.value;
+    console.log(value);
+  };
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -82,7 +83,7 @@ function ResponsiveAppBar() {
     width: "100%",
     "& .MuiInputBase-input": {
       padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
+
       paddingLeft: `calc(1em + ${theme.spacing(4)})`,
       transition: theme.transitions.create("width"),
       [theme.breakpoints.up("sm")]: {
@@ -208,6 +209,7 @@ function ResponsiveAppBar() {
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
+              onChange={handleInputText}
             />
           </Search>
         </Toolbar>
