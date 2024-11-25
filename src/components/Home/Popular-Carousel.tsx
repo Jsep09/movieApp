@@ -53,7 +53,7 @@ const CarouselItem = ({ item }: CarouselItemProps) => {
       sx={{ borderRadius: "16px" }}
     >
       <img
-        src={`https://image.tmdb.org/t/p/w1280/${item.backdrop_path}`}
+        src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`}
         alt={item.title}
         className="w-full sm:h-16 md:h-2/4 lg:h-110 xl:h-128 2xl:h-128 object-cover rounded-md"
       />
