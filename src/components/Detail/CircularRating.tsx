@@ -6,7 +6,7 @@ interface CircularRatingProp {
 }
 
 const CircularRating: React.FC<CircularRatingProp> = ({ voteAverage }) => {
-  const progression = voteAverage !== null ? (voteAverage / 10) * 100 : 0;
+  const progression = voteAverage ? (voteAverage / 10) * 100 : 0;
 
   return (
     <Box
@@ -18,7 +18,6 @@ const CircularRating: React.FC<CircularRatingProp> = ({ voteAverage }) => {
       }}
     >
       <CircularProgress
-        variant="soft"
         sx={{
           "--CircularProgress-size": "80px",
           color: "white",
