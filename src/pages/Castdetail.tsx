@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import { Cast } from "../interface/movieperson";
 import { CastDetailResponse } from "../interface/CastDetail";
 import MoviePersonCard from "../components/Person-detail/MoviePersonCard";
+import PersonIcon from "../assets/background-person-icon.png";
 interface locationStateId {
   id: number;
 }
@@ -53,6 +54,9 @@ const Castdetail = () => {
                 src={`https://image.tmdb.org/t/p/original/${personDetail?.profile_path}`}
                 alt=""
                 className="rounded-xl"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = PersonIcon;
+                }}
               />
             </div>
             <div className="flex-1 flex-col z-20 overflow-hidden">
@@ -65,7 +69,9 @@ const Castdetail = () => {
                     biography
                   </h2>
                   <p className="text-white text-sm  ">
-                    {personDetail?.biography}
+                    {personDetail?.biography
+                      ? personDetail.biography
+                      : "No data"}
                   </p>
                 </div>
                 <div className="flex flex-col  ">
@@ -93,6 +99,9 @@ const Castdetail = () => {
                   src={`https://image.tmdb.org/t/p/original/${personDetail?.profile_path}`}
                   alt=""
                   className="rounded-xl"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = PersonIcon;
+                  }}
                 />
               </div>
             </div>
@@ -106,7 +115,7 @@ const Castdetail = () => {
                   Biography
                 </h2>
                 <p className="text-gray-400 text-xs">
-                  {personDetail?.biography}
+                  {personDetail?.biography ? personDetail.biography : "No data"}
                 </p>
               </div>
               <div className="flex flex-col  ">
