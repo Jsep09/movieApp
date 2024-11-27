@@ -40,9 +40,6 @@ const PaginationUI: React.FC<PaginationProp> = ({ page, onPageChange }) => {
               backgroundColor: "white",
               color: "black",
             },
-            "& .MuiPaginationItem-root:hover": {
-              backgroundColor: "rgba(255, 255, 255, 0.2)",
-            },
           }}
         />
       </Stack>
