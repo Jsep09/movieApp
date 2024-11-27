@@ -36,9 +36,9 @@ const Detail = () => {
   useEffect(() => {
     Getcast();
   }, []);
-  useEffect(() => {
-    console.log("Cast data", cast);
-  }, [cast]);
+  // useEffect(() => {
+  //   console.log("Cast data", cast);
+  // }, [cast]);
 
   const runtimeFommat = () => {
     if (movieDetail) {

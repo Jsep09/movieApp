@@ -7,6 +7,7 @@ import App from "./App.tsx";
 import About from "./pages/About.tsx";
 import Favorite from "./pages/Favorite.tsx";
 import Detail from "./pages/Detail.tsx";
+import Castdetail from "./pages/Castdetail.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/detail/:id",
     element: <Detail />,
+  },
+  {
+    path: "/persondetail/:id",
+    element: <Castdetail />,
   },
 ]);
 createRoot(document.getElementById("root")!).render(
