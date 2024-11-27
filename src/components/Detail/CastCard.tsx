@@ -6,8 +6,8 @@ interface CastProps {
 }
 const CastCard: React.FC<CastProps> = ({ cast }) => {
   return (
-    <div className="inline-block mr-3 rounded-xl bg-white">
-      <div className="w-52 h-64 max-w-md overflow-hidden  shadow-md hover:scale-105 transition duration-500 cursor-pointer ">
+    <div className="inline-block mr-3 rounded-xl bg-white hover:scale-105 transition duration-500 cursor-pointer ">
+      <div className="w-52 h-64 max-w-md overflow-hidden  shadow-md ">
         <img
           src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`}
           //   alt={cast.name}
