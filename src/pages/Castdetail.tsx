@@ -26,10 +26,6 @@ const Castdetail = () => {
     getApiCastCredit();
   }, []);
 
-  // useEffect(() => {
-  //   console.log("castCredit data =>", moviePerson);
-  // }, [[moviePerson]]);
-
   const getApiPersonDetail = async () => {
     const result = await getPersonDetail(state.id);
     setPersonDetail(result);
@@ -37,10 +33,6 @@ const Castdetail = () => {
   useEffect(() => {
     getApiPersonDetail();
   }, []);
-
-  // useEffect(() => {
-  //   console.log("personDetail data =>", personDetail);
-  // }, [[personDetail]]);
 
   return (
     <div>

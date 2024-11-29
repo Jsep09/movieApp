@@ -7,14 +7,12 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import InputBase from "@mui/material/InputBase";
-import { styled, alpha } from "@mui/material/styles";
-import SearchIcon from "@mui/icons-material/Search";
+
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
 import { useNavigate } from "react-router-dom";
-
+import SearchInput from "./controls/SearchInput";
 const pages = [
   {
     name: "Home",
@@ -35,12 +33,6 @@ function ResponsiveAppBar() {
     null
   );
 
-  const handleInputText = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // value คือ user input
-    const value: string = e.target.value;
-    console.log(value);
-  };
-
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -48,52 +40,6 @@ function ResponsiveAppBar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  const Search = styled("div")(({ theme }) => ({
-    position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    "&:hover": {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginLeft: 0,
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(1),
-      width: "auto",
-    },
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: theme.spacing(1),
-      width: "40%",
-    },
-  }));
-
-  const SearchIconWrapper = styled("div")(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }));
-
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: "inherit",
-    width: "100%",
-    "& .MuiInputBase-input": {
-      padding: theme.spacing(1, 1, 1, 0),
-
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create("width"),
-      [theme.breakpoints.up("sm")]: {
-        width: "12ch",
-        "&:focus": {
-          width: "20ch",
-        },
-      },
-    },
-  }));
 
   // use navigate to another page
   const navigate = useNavigate();
@@ -110,7 +56,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -175,7 +121,7 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -202,16 +148,8 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-              onChange={handleInputText}
-            />
-          </Search>
+          {/* input */}
+          <SearchInput />
         </Toolbar>
       </Container>
     </AppBar>

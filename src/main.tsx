@@ -8,6 +8,7 @@ import About from "./pages/About.tsx";
 import Favorite from "./pages/Favorite.tsx";
 import Detail from "./pages/Detail.tsx";
 import Castdetail from "./pages/Castdetail.tsx";
+import MovieSearch from "./pages/MovieSearch.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/persondetail/:id",
     element: <Castdetail />,
+  },
+  {
+    path: "/MovieSearch/:query",
+    element: <MovieSearch />,
   },
 ]);
 createRoot(document.getElementById("root")!).render(
