@@ -18,14 +18,14 @@ const pages = [
     name: "Home",
     path: "/",
   },
-  {
-    name: "Favorite",
-    path: "/favorite",
-  },
-  {
-    name: "About",
-    path: "/about",
-  },
+  // {
+  //   name: "Favorite",
+  //   path: "/favorite",
+  // },
+  // {
+  //   name: "About",
+  //   path: "/about",
+  // },
 ];
 
 function ResponsiveAppBar() {
